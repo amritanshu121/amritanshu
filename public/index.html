@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>Amritanshu Yadav</h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                &#9776; 
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home">
+        <div class="profile-pic">
+            <img src="img/vickey.jpg" alt="Profile picture of Amritanshu Yadav, a Java Developer">
+        </div>
+        <div class="intro">
+            <h2>Hi, It's <span class="highlight">Amritanshu</span></h2>
+            <h3 class="animated-text">I'm a Java Developer</h3>
+            <p>Welcome to my portfolio! I specialize in building efficient, scalable Java applications. Feel free to browse my work and get in touch for collaboration.</p>
+            <div class="buttons">
+                <a href="#hire" class="btn hire"  onclick="window.location.href='mailto:amritanshuy56@gmail.com?subject=Hiring Inquiry&body=Hello, I am interested in hiring you.'">Hire</a>
+                <a href="#contact" class="btn contact">Contact</a>
+                <a href="your-resume.pdf" class="btn" download>Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-timeline">
+            <div class="timeline-item">
+                <span class="timeline-icon"><i class="fas fa-graduation-cap"></i></span>
+                <div class="timeline-content">
+                    <h3>10th Grade <span>(2020)</span></h3>
+                    <p><em>School:</em> [Your School Name]</p>
+                    <p><strong>Highlights:</strong> High distinction in Science and Mathematics</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon"><i class="fas fa-school"></i></span>
+                <div class="timeline-content">
+                    <h3>12th Grade <span>(2022)</span></h3>
+                    <p><em>School:</em> [Your School Name]</p>
+                    <p><strong>Achievements:</strong> Top 5% in board exams, specialized in Physics, Chemistry, and Mathematics</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon"><i class="fas fa-university"></i></span>
+                <div class="timeline-content">
+                    <h3>Bachelor's in computer applictaion <span>(Expected 2025)</span></h3>
+                    <p><em>University:</em> [Your University Name]</p>
+                    <p><strong>Relevant Courses:</strong> Data Structures, Algorithms, Java Programming, Software Engineering</p>
+                    <p><strong>Projects:</strong> Developed a library management system, RESTful API for an e-commerce platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Under Maintenance...</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Proficient in building robust and scalable applications using Java.</p>
+            </div>
+            <div class="skill">
+                <h3>Spring Framework</h3>
+                <p>Experience in building web applications with Spring Boot, Spring MVC.</p>
+            </div>
+            <div class="skill">
+                <h3>SQL</h3>
+                <p>Proficient in writing complex queries and database management.</p>
+            </div>
+            <div class="skill">
+                <h3>RESTful APIs</h3>
+                <p>Skilled in designing and implementing RESTful services in Java.</p>
+            </div>
+        </div>
+    </section>
+
+   
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="successMessage" style="display: none;">Thank you! Your message has been sent.</div>
+       
+        
+        
+    </section>
+
+    <footer>
+        <ul class="social">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://github.com/Vickey021">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <div class="footer-attraction">
+            <p>© 2024 Amritanshu Yadav. All rights reserved.</p>
+        </div>
+    </footer>
+
+     <!-- Scroll to Top and Theme Toggle Buttons -->
+     <button id="scrollToTop" class="scroll-to-top" title="Go to top">&#8679;</button>
+     
+
+    <!-- Smooth scroll script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle'); // Toggle class for animation effect
+        });
+
+          // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // Show/hide scroll to top button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        // Smooth page loading
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
+// contact form alert
+document.getElementById("contactForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+            // Display success message
+            document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").innerText = "Thank you! Your message has been sent.";
+
+            // Clear form fields
+            document.getElementById("contactForm").reset();
+        } else {
+            const errorData = await response.json();
+            console.error("Error:", errorData.error);
+            alert("There was an error: " + errorData.error);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("An unexpected error occurred. Please try again later.");
+    }
+});
+   </script>
+    <!-- Loading Screen -->
+<div id="loadingScreen">
+    <div class="loader"></div>
+</div>
+
+</body>
+</html>
