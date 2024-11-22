@@ -75,12 +75,6 @@
     </section>
     
 
-
-    <section id="services">
-        <h2>Services</h2>
-        <p>Under Maintenance...</p>
-    </section>
-
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
@@ -103,6 +97,132 @@
         </div>
     </section>
 
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="img/10559212_4502401.jpg" alt="Project 1">
+                <h3>Dance website</h3>
+                <p>A brief description of Dance app.</p>
+                <button class="btn" onclick="showPopup('project1')">View Details</button>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="img/weather.jpg" alt="Project 2">
+                <h3>Weather app</h3>
+                <p>A brief description of Weather web.</p>
+                <button class="btn" onclick="showPopup('project2')">View Details</button>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A brief description of Project 3.</p>
+                <button class="btn" onclick="showPopup('project3')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup for Project Details -->
+    <div id="popup-project1" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Dance Website</h3>
+                <span class="close-btn" onclick="closePopup('project1')">&times;</span>
+            </div>
+            <div class="popup-body">
+                <p># Dance Website
+                    This project is a modern, responsive website for a dance studio.
+                    It allows users to book tickets for events, enroll in courses, and inquire about services.
+                    The website uses a PostgreSQL Neon database to handle contact form submissions, and it's fully hosted on Vercel for easy access.</p>
+                    
+                  <p>  ## Key Features
+                    Event Booking System: Users can purchase tickets for events and download them directly from the website.
+                    Workshop Section: Provides information about upcoming workshops and allows users to explore them.
+                    Course Enrollment: Users can view available dance courses and inquire about them via the contact form.
+                    Contact Form: Integrated with PostgreSQL Neon to store user inquiries and feedback.</p>
+                    
+                  <p>  ## Technologies Used
+                    Frontend: HTML, CSS, JavaScript
+                    Backend: PostgreSQL Neon (for contact form integration)
+                    Deployment: Vercel (for hosting the website)
+                    </p>
+                    
+                   <p> ## Live Website
+                    You can view the live website here:
+                    <a href="https://danceweb-inky.vercel.app">Dance App live</a>
+                    </p>
+                    
+                  
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-project2" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Weather App with Real time data</h3>
+                <span class="close-btn" onclick="closePopup('project2')">&times;</span>
+            </div>
+            <div class="popup-body">
+                <p>
+                    Welcome to my Weather App! This web application allows users to easily check the current weather for any city of their choice.
+                    Built with a focus on simplicity, responsiveness, and performance, this app provides real-time weather data in a clean and user-friendly interface.</p>
+                    
+                    
+                  <p>  ## Features
+                    Real-time weather information: Get live weather updates from any city.
+                    Swipe functionality: Swipe left and right to switch between different cities.
+                    Detailed weather data: Displays temperature, humidity, wind speed, and weather description.
+                    Responsive design: Optimized for mobile and desktop views.
+                    </p>
+                    
+                  <p>  ## Technologies Used
+                    Frontend: HTML, CSS, JavaScript
+                    Weather API: OpenWeatherMap (or another weather API you’re using)
+                    LocalStorage: Stores favorite cities for quick access.
+                    Responsive design: Ensures smooth user experience on any device.
+                    </p>
+                    
+                  <p>  ## How to Use
+                    Add cities via the app's Add City page.
+                    View the weather details for each city.
+                    Swipe left/right to switch between cities for a quick comparison.
+                </p>
+
+                <p> ## Live Version
+                    You can view the live website here:
+                    <a href="https://weather-web-lac.vercel.app">Dance App live</a>
+                </p>
+                    
+                  
+            </div>
+        </div>
+    </div>
+
+    <div id="popup-project3" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Project 3 Details</h3>
+                <span class="close-btn" onclick="closePopup('project3')">&times;</span>
+            </div>
+            <div class="popup-body">
+                <p>Full details of Project 3 go here. Share insights, technologies used, and project outcomes.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Under Maintenance...</p>
+    </section>
+
    
         <section id="contact">
             <h2>Contact Me</h2>
@@ -113,7 +233,6 @@
                 <button type="submit">Send</button>
             </form>
            
-       
         
         
     </section>
@@ -194,6 +313,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
         if (response.ok) {
             // Display success message
+            
             alert("Thank you! Your message has been sent.");
 
             // Clear form fields
@@ -208,6 +328,27 @@ document.getElementById("contactForm").addEventListener("submit", async function
         alert("An unexpected error occurred. Please try again later.");
     }
 });
+
+function showPopup(projectId) {
+    const popup = document.getElementById(`popup-${projectId}`);
+    popup.style.display = 'block';
+}
+
+function closePopup(projectId) {
+    const popup = document.getElementById(`popup-${projectId}`);
+    popup.style.display = 'none';
+}
+
+// Optional: Close popup when clicking outside the content
+window.addEventListener('click', (event) => {
+    const popups = document.querySelectorAll('.popup');
+    popups.forEach((popup) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+});
+
    </script>
     <!-- Loading Screen -->
 <div id="loadingScreen">
