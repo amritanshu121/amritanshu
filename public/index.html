@@ -39,7 +39,7 @@
             <div class="buttons">
                 <a href="#hire" class="btn hire"  onclick="window.location.href='mailto:amritanshuy56@gmail.com?subject=Hiring Inquiry&body=Hello, I am interested in hiring you.'">Hire</a>
                 <a href="#contact" class="btn contact">Contact</a>
-                <a href="AmritanshuYadavResume (3).pdf" class="btn" download>Download Resume</a>
+                <a href="AmritanshuYadavResume.pdf" class="btn" download>Download Resume</a>
             </div>
         </div>
     </div>
@@ -113,26 +113,33 @@
         <div class="projects-container">
             <!-- Project 1 -->
             <div class="project-card">
-                <img src="img/vickeyweather.jpg" alt="Project 1">
-                <h3>Dance website</h3>
-                <p>A brief description of Dance app.</p>
+                <img src="sms (2).jpg" alt="Project 1">
+                <h3>Student MAnagement System</h3>
+                <p>A brief description of Student Management System.</p>
                 <button class="btn" onclick="showPopup('project1')">View Details</button>
             </div>
 
             <!-- Project 2 -->
             <div class="project-card">
-                <img src="img/weather.jpg" alt="Project 2">
-                <h3>Weather app</h3>
-                <p>A brief description of Weather web.</p>
+                <img src="mfa.jpg" alt="Project 2">
+                <h3>Movie Finder App</h3>
+                <p>A brief description of Movie Finder App.</p>
                 <button class="btn" onclick="showPopup('project2')">View Details</button>
             </div>
 
             <!-- Project 3 -->
             <div class="project-card">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
+                <img src="lms.jpg".jpg" alt="Project 3">
+                <h3>LMS Scan Web App</h3>
                 <p>A brief description of Project 3.</p>
                 <button class="btn" onclick="showPopup('project3')">View Details</button>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="ec.jpg" alt="Project 4">
+                <h3>Ecommerce Website</h3>
+                <p>A brief description of Ecommerce Website.</p>
+                <button class="btn" onclick="showPopup('project4')">View Details</button>
             </div>
         </div>
     </section>
@@ -141,88 +148,169 @@
     <div id="popup-project1" class="popup">
         <div class="popup-content">
             <div class="popup-header">
-                <h3>Dance Website</h3>
+                <h3>Student Management System </h3>
                 <span class="close-btn" onclick="closePopup('project1')">&times;</span>
             </div>
-            <div class="popup-body">
-                <p># Dance Website
-                    This project is a modern, responsive website for a dance studio.
-                    It allows users to book tickets for events, enroll in courses, and inquire about services.
-                    The website uses a PostgreSQL Neon database to handle contact form submissions, and it's fully hosted on Vercel for easy access.</p>
-                    
-                  <p>  ## Key Features
-                    Event Booking System: Users can purchase tickets for events and download them directly from the website.
-                    Workshop Section: Provides information about upcoming workshops and allows users to explore them.
-                    Course Enrollment: Users can view available dance courses and inquire about them via the contact form.
-                    Contact Form: Integrated with PostgreSQL Neon to store user inquiries and feedback.</p>
-                    
-                  <p>  ## Technologies Used
-                    Frontend: HTML, CSS, JavaScript
-                    Backend: PostgreSQL Neon (for contact form integration)
-                    Deployment: Vercel (for hosting the website)
-                    </p>
-                    
-                   <p> ## Live Website
-                    You can view the live website here:
-                    <a href="https://danceweb-inky.vercel.app">Dance App live</a>
-                    </p>
-                    
-                  
-            </div>
+      <div class="popup-body">
+  <p>
+    # Student Management System  
+    Built a full-stack web application to manage student records using Spring Boot (REST APIs), MySQL, and React.js.  
+    Implemented features including student registration, update, deletion, and data viewing.  
+    Integrated JWT-based authentication, role-based dashboards (Admin/Teacher/Student), and used Axios in React for API communication.  
+    Backend APIs tested using Postman; ensured responsive UI with React Router and CSS modules.  
+    Designed database schema using MySQL and managed entities with Spring Data JPA.
+  </p>
+
+  <p>## Key Features</p>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>📝 Student registration, update, deletion, and view</li>
+    <li>🔐 JWT Authentication and Role-based Access (Admin, Teacher, Student)</li>
+    <li>📱 Responsive design with React Router & CSS Modules</li>
+    <li>🔄 Axios integration for API requests</li>
+    <li>🧪 Postman tested REST APIs</li>
+  </ul>
+
+ <p>## Technologies Used</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>⚛️ Frontend: React.js, HTML, CSS, JavaScript</li>
+  <li>🔙 Backend: Spring Boot, Spring Data JPA, MySQL</li>
+  <li>🛠️ Tools: Postman, Axios</li>
+  <li>🔑 Authentication: JWT</li>
+</ul>
+
+
+  <p>
+    ## Live Website  
+    You can view the live project here:  
+    <a href="https://your-student-app.vercel.app">Student Management System Live</a>
+  </p>
+</div>
+
+
         </div>
     </div>
 
     <div id="popup-project2" class="popup">
         <div class="popup-content">
             <div class="popup-header">
-                <h3>Weather App with Real time data</h3>
+                <h3>Movie Finder App</h3>
                 <span class="close-btn" onclick="closePopup('project2')">&times;</span>
             </div>
-            <div class="popup-body">
-                <p>
-                    Welcome to my Weather App! This web application allows users to easily check the current weather for any city of their choice.
-                    Built with a focus on simplicity, responsiveness, and performance, this app provides real-time weather data in a clean and user-friendly interface.</p>
-                    
-                    
-                  <p>  ## Features
-                    Real-time weather information: Get live weather updates from any city.
-                    Swipe functionality: Swipe left and right to switch between different cities.
-                    Detailed weather data: Displays temperature, humidity, wind speed, and weather description.
-                    Responsive design: Optimized for mobile and desktop views.
-                    </p>
-                    
-                  <p>  ## Technologies Used
-                    Frontend: HTML, CSS, JavaScript
-                    Weather API: OpenWeatherMap (or another weather API you’re using)
-                    LocalStorage: Stores favorite cities for quick access.
-                    Responsive design: Ensures smooth user experience on any device.
-                    </p>
-                    
-                  <p>  ## How to Use
-                    Add cities via the app's Add City page.
-                    View the weather details for each city.
-                    Swipe left/right to switch between cities for a quick comparison.
-                </p>
+      <div class="popup-body">
+  <p>
+    # Movie Finder App  
+    A responsive React-based web application to search, explore, and view details of movies using the OMDB API.  
+    It offers real-time search, detailed views, and a smooth user experience with infinite scroll and dark/light mode support.
+  </p>
 
-                <p> ## Live Version
-                    You can view the live website here:
-                    <a href="https://weather-web-lac.vercel.app">Dance App live</a>
-                </p>
-                    
-                  
-            </div>
+  <p>## Key Features</p>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>🔍 Search movies by name using OMDB API</li>
+    <li>📄 Detailed movie view (title, poster, genre, plot, IMDb rating, etc.)</li>
+    <li>🌙 Dark/Light mode toggle with saved preferences</li>
+    <li>♾️ Infinite scrolling to load more results as you scroll</li>
+    <li>⚡ Responsive UI using Flexbox & Grid</li>
+    <li>🚀 Fast performance with Vite and SWC</li>
+    <li>☁️ Deployed live on Vercel</li>
+  </ul>
+
+ <p>## Technologies Used</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>⚛️ Frontend: React, Vite, React Router</li>
+  <li>🎨 Styling: CSS, Flexbox, Grid</li>
+  <li>🔧 Features: Axios, OMDB API, Dark/Light Mode</li>
+  <li>☁️ Deployment: Vercel</li>
+</ul>
+
+
+  <p>
+    ## Live Website  
+    You can view the live project here:  
+    <a href="https://movie-finder-lime.vercel.app/">Movie Finder Live</a>
+  </p>
+</div>
+
+
         </div>
     </div>
 
     <div id="popup-project3" class="popup">
         <div class="popup-content">
             <div class="popup-header">
-                <h3>Project 3 Details</h3>
+                <h3>LMS Scan Web App</h3>
                 <span class="close-btn" onclick="closePopup('project3')">&times;</span>
             </div>
-            <div class="popup-body">
-                <p>Full details of Project 3 go here. Share insights, technologies used, and project outcomes.</p>
+          <div class="popup-body">
+  <p>
+    # LMS Scan Web App  
+    A web application developed as part of a larger **Library Management System (LMS)** for managing student interactions with the library. It allows students to borrow and return books by scanning a QR code, providing a seamless connection between the web-based system and the desktop LMS. Designed for quick transactions and smooth communication between readers and librarians using a time-limited notification system. This project was developed as a **Final Year Project**.
+  </p>
+
+  <p>## Key Features</p>
+  <ul style="list-style: none; padding-left: 0;">
+    <li>📚 QR Code Scan to access LMS actions</li>
+    <li>👤 Borrow books by entering Reader ID and choosing from available books</li>
+    <li>🕒 Auto Due Date (7 days) and Request Timeout (5 minutes)</li>
+    <li>🔁 Return request flow with expiry handling</li>
+    <li>🔔 Notifications stored in the <code>notification</code> table and auto-deleted after 5 minutes if not approved</li>
+    <li>🚫 Borrow limit: 2 books per reader</li>
+    <li>💰 Auto fine system for late returns</li>
+    <li>🔍 "Details" feature to view all books issued to a reader</li>
+  </ul>
+
+ <p>## Technologies Used</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>🖥️ Frontend: HTML, CSS, JavaScript</li>
+  <li>🔙 Backend: Node.js</li>
+  <li>🗃️ Database: NeonDB (PostgreSQL)</li>
+  <li>☁️ Deployment: Vercel</li>
+</ul>
+
+
+  <p>
+    ## Live Website  
+    You can view the live project here:  
+    <a href="https://scans-gold.vercel.app/">LMS Scan App Live</a>
+  </p>
+</div>
+
+
+        </div>
+    </div>
+
+    <div id="popup-project4" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Ecommerce Website</h3>
+                <span class="close-btn" onclick="closePopup('project4')">&times;</span>
             </div>
+          <p>
+  # Fulljhakaas E-commerce Website  
+  Designed a responsive frontend for an e-commerce platform featuring product listings, a navbar, and a shopping cart UI using HTML, CSS, and JavaScript.  
+  Explored Node.js for backend integration and connection flow, and deployed the application on Vercel for a live demo.
+</p><br>
+
+<p>## Key Features</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>🛍️ Product listings with sorting and filtering options</li>
+  <li>🛒 Shopping cart for adding/removing items</li>
+  <li>🔗 Backend integration with Node.js</li>
+  <li>📱 Fully responsive frontend design</li>
+  <li>☁️ Deployed live on Vercel for easy access</li>
+</ul><br>
+
+<p>## Technologies Used</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li>🖥️ Frontend: HTML, CSS, JavaScript</li>
+  <li>🔙 Backend: Node.js</li>
+  <li>☁️ Deployment: Vercel</li>
+</ul>
+
+<p>## Live Website  
+You can view the live project here:  
+<a href="https://fulljhakaas.vercel.app/">Fulljhakaas E-commerce Live</a></p>
+
+
         </div>
     </div>
 
