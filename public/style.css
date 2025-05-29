@@ -386,11 +386,16 @@ body.loaded #loadingScreen {
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
+      nav ul li a{
+    color: white;
+   }
 
     
     nav ul.active {
         display: flex; /* Display when active */
         background-color: black;
+         margin-left: 9px;
+    gap: 2px;
     }
     .hamburger {
         display: inline-block;
