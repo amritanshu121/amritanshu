@@ -666,8 +666,11 @@ body.loaded #loadingScreen {
     color: white;
 }
 
-.popup-body a{
+.popup-body  a{
     color: cyan;
+}
+.popup-body ul li{
+    color: white;
 }
 
 /* services section */
