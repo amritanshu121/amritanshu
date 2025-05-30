@@ -632,7 +632,7 @@ body.loaded #loadingScreen {
 
 .popup-content {
     position: relative;
-   background: #fff;
+      background: aliceblue;
     width: 90%;
     max-width: 600px;
     max-height: 80%; /* Restrict the popup height */
