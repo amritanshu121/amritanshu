@@ -672,7 +672,7 @@ body.loaded #loadingScreen {
 }
 
 .popup-body  a{
-    color: cyan;
+  color: darkblue;
 }
 .popup-body ul li{
     color: rgb(0, 0, 0);
